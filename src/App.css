@@ -1,14 +1,17 @@
 .App {
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
   justify-content: center;
   text-align: center;
 }
 
-
-.App-link {
-  color: #61dafb;
+.App::after {
+  content: '';
+  position: absolute;
+  height: 99vh;
+  width: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .boards {
@@ -53,4 +56,16 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 3px 2px 8px -5px #000;
   padding: 2px 0 0 0;
+  z-index: 2;
+}
+
+footer {
+  position: absolute;
+  top: 92%;
+  color: rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 3;
+}
+footer h1 {
+  font-size: 0.8rem;
 }
